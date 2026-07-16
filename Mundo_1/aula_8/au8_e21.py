@@ -1,9 +1,10 @@
 #Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.
 
 import pygame
-pygame.mixer.init()
 pygame.init()
-pygame.mixer.music.load('doutornefario.mp3')
+pygame.mixer.init()
+pygame.mixer.music.load('Mundo_1/aula_8/hub-intro-sound.mp3')
 pygame.mixer.music.play()
-pygame.event.wait()
-pygame.quit
+while pygame.mixer.music.get_busy():
+    pygame.time.Clock().tick(10)
+pygame.quit()

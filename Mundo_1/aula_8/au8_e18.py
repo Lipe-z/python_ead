@@ -1,10 +1,13 @@
 #Faça um programa que leia um ângulo qualquer e mostre na tela o 
 #valor do seno, cosseno e tangente desse ângulo.
+from math import sin, cos, tan, radians
 
-from math import radians, sin, cos, tan
-angulo = float(input('Digite o valor do angulo: '))
-seno = sin(radians(angulo))
-coss = cos(radians(angulo))
-tang = tan(radians(angulo))
+angulo_graus = int(input("Digite o ângulo que deseja: "))
+angulo_radianos = radians(angulo_graus)
 
-print(f'O angulo de {angulo:.2f}° tem:\nO SENO de {seno:.2f}\nO COSSENO de {coss:.2f}\nE a TANGENTE de {tang:.2f} ')
+seno = sin(angulo_radianos)
+print(f"O ângulo tem o seno: {seno:.2} ")
+cosseno = cos(angulo_radianos)
+print(f"O ângulo tem o cosseno: {cosseno:.2}")
+tangente = tan(angulo_radianos)
+print(f"O ângulo tem a tangente: {tangente:.2}")
