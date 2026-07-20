@@ -4,15 +4,16 @@
 #--Quantas letras ao todo (sem considerar espaços)
 #--Quantas letras tem o primeiro nome.
 
-nome = str(input("Digite seu nome: "))
+nome = str(input("Digite seu nome completo: ")).strip()
 
 #Maiúsculas e Minúsculas
-print(f"Maiúsculas: {nome.strip().upper()}")
-print(f"Minúsculas: {nome.strip().lower()}")
+print(f"Seu nome em maiúsculas é {nome.upper()}")
+print(f"Seu nome em minúsculas é {nome.lower()}")
 
 #Letras ao Todo
-print(f"Contagem de caracteres: {len(nome.replace(" ", ""))}")
+print(f"Seu nome tem ao todo {len(nome) - nome.count(' ')} letras")
 
 #Letras primeiro nome
 dividir_nome = nome.split()
-print(f"Contagem de caracteres (primeiro nome): {len(dividir_nome[0])}")
+print(f"Seu primeiro nome é {dividir_nome[0]} e ele tem {len(dividir_nome[0])} letras")
+# print(f"Seu primeiro nome é {dividir_nome[0]} e ele tem {nome.find(' ')} letras") --ALTERNATIVA--
