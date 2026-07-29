@@ -11,8 +11,11 @@ nt2 = float(input("Segunda nota: "))
 media = (nt1 + nt2) / 2
 
 if media < 5.0:
-    print("\033[1;31mREPROVADO\033[0m")
-elif 5.0 <= media <= 6.9:
-    print("\033[1;33mRECUPERAÇÃO\033[0m")
+    print(f"\033[1;31mTirando {nt1} e {nt2}, a média do aluno é {media}\033[0m")
+    print("\033[1;31mO aluno foi REPROVADO\033[0m")
+elif 7 > media >= 5:
+    print(f"\033[1;33mTirando {nt1} e {nt2}, a média do aluno é {media}\033[0m")
+    print("\033[1;33mO aluno está de RECUPERAÇÃO\033[0m")
 else:
-    print("\033[1;32mAPROVADO\033[0m")
+    print(f"\033[1;32mTirando {nt1} e {nt2}, a média do aluno é {media}\033[0m")
+    print("\033[1;32mO aluno está APROVADO.\033[0m")
