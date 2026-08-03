@@ -14,3 +14,4 @@ if tot == 2:
     print("E por isso ele \033[1;32mÉ PRIMO!\033[0m")
 else:
     print("Por isso ele \033[1;31mNÃO É PRIMO!\033[0m")
+    
